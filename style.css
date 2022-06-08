@@ -142,11 +142,13 @@ body {
     height: 61px;
     background: #CBCBCB;
     border-radius: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .box-envia > div {
     width: 200px;
-    margin: 5px auto;
+    margin: 0px auto;
 }
 
 .box-envia h1{
