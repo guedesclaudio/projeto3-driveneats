@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="reset.css">
         <title>Driven Eats</title>
     </head>
-    <body>
+    <body id="body">
 
         <div class="topo">
             <h1>DrivenEats</h1>
@@ -18,7 +18,7 @@
         <div class="box-cardapio">
             <h1>Primeiro, seu prato</h1>
             <div class="menu-cardapio">
-                <div class="box-escolha" id="prato1" onclick="selecionaItem1()">
+                <div class="box-escolha" id="prato1" onclick="selecionaItem1()" >
                     <div>
                         <img src="img/frango_yin_yang 1.jpg" alt="prato-frango">
                         <h4>Frango Yin Yang</h4>
@@ -136,6 +136,10 @@
             <div class="box-envia" id="botao-envia">
                 <div id="texto-botao"><h1>Selecione os 3 itens para fechar o pedido</h1></div>
             </div>
+        </div>
+
+        <div id="confirma-pedido">
+            
         </div>
 
         <script src="scripts.js"></script>
