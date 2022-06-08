@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body {
+    background-color: #fafafa;
+    width: 414px;
+}
+
+.topo {
+    width: 414px;
+    height: 92px;
+    background-color: #CF2B2B;
+    padding-left: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.topo h1 {
+    font-size: 44px;
+    line-height: 54.63px;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.topo p {
+    font-size: 18px;
+    line-height: 21.09px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
