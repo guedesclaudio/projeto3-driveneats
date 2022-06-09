@@ -23,8 +23,8 @@ function enviaWpp() {
     nome = prompt('Qual o seu nome?')
     endereco = prompt('Qual o seu endereço?')
 
-    document.getElementById('body').style.opacity = '0.3'
-    document.getElementById('confirma-pedido').innerHTML = '<div class="box-final"></div>'
+    //document.getElementById('body').style.opacity = '0.3'
+    //document.getElementById('confirma-pedido').innerHTML = '<div class="box-final"></div>'
 
     var str = `
     Olá, gostaria de fazer o pedido:
@@ -37,14 +37,13 @@ function enviaWpp() {
     Endereço: ${endereco}
     `
     texto = encodeURIComponent(str);
-    //var link = `https://api.whatsapp.com/send?phone=5521999570191&text=${texto}`;
+    var link = `https://api.whatsapp.com/send?phone=5521999570191&text=${texto}`;
 
-    //setTimeout(function() {window.open(link)}, 1000)
+    setTimeout(function() {window.open(link)}, 1000)
   }
 
 function selecionaItem1 () {
     document.getElementById('prato1').style.border = "3px solid #32B72F"
-    //document.getElementById('prato1').style.boxSizing = "border-box"
     document.getElementById('prato2').style.border = "3px solid white"
     document.getElementById('prato3').style.border = "3px solid white"
     document.getElementById('select-img1').style.display = "initial"

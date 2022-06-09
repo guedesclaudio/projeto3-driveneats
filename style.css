@@ -147,6 +147,7 @@ body {
     border-radius: 50px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .box-envia > div {
