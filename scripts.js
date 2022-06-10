@@ -4,12 +4,14 @@ let sobremesa = 0
 let precoComida = 0
 let precoBebida = 0
 let precoSobremesa = 0
+let nome = 0
+let endereco = 0
 
 function mudaBotao () {
     if (prato != 0 && bebida != 0  && sobremesa != 0 ) {
         console.log('passando')
         document.getElementById('botao-envia').style.background = "#32B72F"
-        document.getElementById('texto-botao').innerHTML = '<h1 onclick = "enviaWpp()">Fechar pedido</h1>'
+        document.getElementById('texto-botao').innerHTML = '<h1 onclick = "confirmaPedido()">Fechar pedido</h1>'
     }
 }
 
@@ -19,12 +21,32 @@ function calculaPreco () {
     return total
 }
 
-function enviaWpp() {
+function confirmaPedido() {
     nome = prompt('Qual o seu nome?')
     endereco = prompt('Qual o seu endereço?')
 
-    //document.getElementById('body').style.opacity = '0.3'
-    //document.getElementById('confirma-pedido').innerHTML = '<div class="box-final"></div>'
+    document.querySelector('.container').classList.add('pausa-layout')
+    document.querySelector('body').classList.add('pausa-body')
+    document.querySelector('.escondido').classList.remove('escondido')
+    document.querySelector('.confirma-pedido').classList.add('box-final')
+    document.querySelector('.box-final').innerHTML = `
+    <h1>Confirme seu pedido</h1>
+    <div><div>${prato}</div><div>${precoComida.toFixed(2)}</div></div>
+    <div><div>${bebida}</div><div>${precoBebida.toFixed(2)}</div></div>
+    <div><div>${sobremesa}</div><div>${precoSobremesa.toFixed(2)}</div></div>
+    <div><div><strong>TOTAL</strong></div><div>R$ ${total.toFixed(2)}</div></div>
+    <div class="alinha-botao"><button onclick="enviaWpp()">Tudo certo, pode pedir</button></div>
+    <h4 onclick="cancelaPedido()">Cancelar</h4>
+    `
+}
+
+function cancelaPedido() {
+    location.reload()
+}
+
+function enviaWpp() {
+    //nome = prompt('Qual o seu nome?')
+    //endereco = prompt('Qual o seu endereço?')
 
     var str = `
     Olá, gostaria de fazer o pedido:
