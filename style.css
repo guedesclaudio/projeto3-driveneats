@@ -76,6 +76,7 @@ body {
     justify-content: center;
     align-items: center;
     border: 3px solid white;
+    cursor: pointer;
 }
 
 .box-escolha h4 {
@@ -183,7 +184,7 @@ body {
     border-radius: 9px;
     position: fixed;
     top: 150px;
-    left: 12px;
+    left: 15px;
     z-index: 10;
     overflow-y: hidden;
     margin: 0 auto;
@@ -223,6 +224,11 @@ body {
     cursor: pointer;
 }
 
+.box-final button:hover {
+    background-color: #e3eee6;
+    transition: 300ms;
+}
+
 .box-final.alinha-botao {
     display: flex;
     justify-content: center;
@@ -235,6 +241,11 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     cursor: pointer;
+}
+
+.box-final h4:hover {
+    color: rgb(218, 81, 81);
+    transition: 300ms;
 }
 
 * {
