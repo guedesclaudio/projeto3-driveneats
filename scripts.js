@@ -36,7 +36,7 @@ function confirmaPedido() {
     <div><div>${bebida}</div><div>${precoBebida.toFixed(2)}</div></div>
     <div><div>${sobremesa}</div><div>${precoSobremesa.toFixed(2)}</div></div>
     <div><div><strong>TOTAL</strong></div><div>R$ ${total.toFixed(2)}</div></div>
-    <div class="alinha-botao"><button onclick="enviaWpp()">Tudo certo, pode pedir</button></div>
+    <div class="alinha-botao"><button onclick="enviaWpp()">Tudo certo, pode pedir!</button></div>
     <h4 onclick="cancelaPedido()">Cancelar</h4>
     `
     if (document.querySelector('body').classList = "pausa-body") {
@@ -52,9 +52,7 @@ function cancelaPedido() {
 }
 
 function enviaWpp() {
-    //nome = prompt('Qual o seu nome?')
-    //endereco = prompt('Qual o seu endereço?')
-
+    
     var str = `
     Olá, gostaria de fazer o pedido:
     - Prato: ${prato}
@@ -66,9 +64,11 @@ function enviaWpp() {
     Endereço: ${endereco}
     `
     texto = encodeURIComponent(str);
+    console.log(texto)
     var link = `https://api.whatsapp.com/send?phone=5521999570191&text=${texto}`;
 
     setTimeout(function() {window.open(link)}, 1000)
+    console.log(texto)
   }
 
   
@@ -146,7 +146,6 @@ function selecionaBebida1 () {
         document.getElementById('select-bebida1').style.display = "initial"
         document.getElementById('select-bebida2').style.display = "none"
         document.getElementById('select-bebida3').style.display = "none"
-        y = 1
 
         bebida = 'Coquinha'
         precoBebida = 4.90
@@ -168,7 +167,6 @@ function selecionaBebida2 () {
         document.getElementById('select-bebida1').style.display = "none"
         document.getElementById('select-bebida2').style.display = "initial"
         document.getElementById('select-bebida3').style.display = "none"
-        y = 1
 
         bebida = 'Coquinha Zero'
         precoBebida = 5.90
@@ -189,7 +187,6 @@ function selecionaBebida3 () {
         document.getElementById('select-bebida1').style.display = "none"
         document.getElementById('select-bebida2').style.display = "none"
         document.getElementById('select-bebida3').style.display = "initial"
-        y = 1
 
         bebida = 'Coquinha Gelada'
         precoBebida = 5.90
@@ -211,7 +208,6 @@ function selecionaSobremesa1 () {
         document.getElementById('select-sobremesa1').style.display = "initial"
         document.getElementById('select-sobremesa2').style.display = "none"
         document.getElementById('select-sobremesa3').style.display = "none"
-        z = 1
 
         sobremesa = 'Pudim P'
         precoSobremesa = 7.90
@@ -233,7 +229,6 @@ function selecionaSobremesa2 () {
         document.getElementById('select-sobremesa1').style.display = "none"
         document.getElementById('select-sobremesa2').style.display = "initial"
         document.getElementById('select-sobremesa3').style.display = "none"
-        z = 1
 
         sobremesa = 'Pudim M'
         precoSobremesa = 10.90
@@ -255,7 +250,6 @@ function selecionaSobremesa3 () {
         document.getElementById('select-sobremesa1').style.display = "none"
         document.getElementById('select-sobremesa2').style.display = "none"
         document.getElementById('select-sobremesa3').style.display = "initial"
-        z = 1
 
         sobremesa = 'Pudim G'
         precoSobremesa = 14.90
