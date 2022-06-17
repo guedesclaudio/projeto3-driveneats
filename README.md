@@ -22,7 +22,7 @@
 
 # Preview
 <div align="center">
-  <a href="#"><img src="img/layout.png" width="600"></a>
+  <a href="https://guedesclaudio.github.io/projeto3-driveneats/"><img src="img/layout-driven-eats.png" width="600"></a>
   <br>
   <br>
   <p>Clique na imagem para acessar a página</p>
