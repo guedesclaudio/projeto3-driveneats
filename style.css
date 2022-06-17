@@ -251,3 +251,34 @@ body {
 * {
     box-sizing: content-box; 
  }
+
+@media (max-width: 414px) {
+    .envia-pedido {
+      width: 100%;
+    }
+  
+    .box-envia {
+      width: 86%;
+    }
+  
+    .box-final {
+      width: 91%;
+      left: 5%;
+    }
+  
+    .box-final div {
+      font-size: 16px;
+    }
+  
+    .box-final button {
+      font-size: 18px;
+    }
+  
+    .box-final h4 {
+      font-size: 16px;
+    }
+  
+    body {
+      overflow-x: hidden;
+    }
+  }
