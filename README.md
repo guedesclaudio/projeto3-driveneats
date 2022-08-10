@@ -1,5 +1,5 @@
 <div align="center">
-  <strong>DRIVEN EATS</strong>
+  <h1><strong>DRIVEN EATS</strong></h1>
 </div>
 <br>
   
